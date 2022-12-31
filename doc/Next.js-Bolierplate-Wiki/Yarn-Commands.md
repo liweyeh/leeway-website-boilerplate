@@ -1,7 +1,7 @@
 # List of useful command
 
 | Command              | Description                                                 |
-| ------------------   | ----------------------------------------------------------- |
+| -------------------- | ----------------------------------------------------------- |
 | `yarn dev`           | starts the project on localhost:3000                        |
 | `yarn lint`          | run linting to check on code with eslint rules              |
 | `yarn prettier`      | run prettier to format all files                            |

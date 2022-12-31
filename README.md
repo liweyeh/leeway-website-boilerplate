@@ -1,5 +1,3 @@
-[[_TOC_]]
-
 # Adasa Website Template
 
 This webite is a [Next.js](https://nextjs.org/) template bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
@@ -36,18 +34,15 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 ## Front-end
 
-- **[`TypeScript`](https://www.typescriptlang.org)** - A typed superset of JavaScript that compiles to plain JavaScript
-- **[`Next.js`](https://nextjs.org)** - A modern server side rendering for React application
-- **[`sass`](https://sass-lang.com/)** : `^1.49.9`
-- **[`axios`](https://www.npmjs.com/package/axios)** : `^0.26.1`
-- **[`date-fns`](https://www.npmjs.com/package/date-fns)** : `2.28.0`
-- **`dotenv`** : `^16.0.0`
+- **[`TypeScript`](https://www.typescriptlang.org)** `^4.9.4`
+- **[`Next.js`](https://nextjs.org)** : `^13.1.1`
+- **[`sass`](https://sass-lang.com/)** : `^1.57.1`
+- **[`axios`](https://www.npmjs.com/package/axios)** : `1.2.2`
+- **[`date-fns`](https://www.npmjs.com/package/date-fns)** : `^2.28.0`
 - **`lodash`** : `^4.17.21`
-- **`next`** : `12.1.0`
-- **`react`** : `17.0.2`
-- **`react-dom`**: `17.0.2`
+- **`react`** : `^18.2.0`
 
 ## Test
 
-- **[`cypress`](https://www.cypress.io/)** End to End testing
-- **[`jest`](https://jestjs.io/)** JavaScript Testing Framework
+- **[`cypress`](https://www.cypress.io/)** : `^12.2.0`
+- **[`jest`](https://jestjs.io/)** `^27.5.1`

@@ -30,7 +30,6 @@ Each feature is prefixed by an icon showing its maturity or integration status:
 
 - 🚀 [MainLayput](/Next.js-Bolierplate-Wiki/Features/UI-components/MainLayout) : simple generic layout
 
-
 # Error Handling
 
 - 🚀 [Error](/Next.js-Bolierplate-Wiki/Features/Error-handling/Error)
@@ -46,7 +45,6 @@ Each feature is prefixed by an icon showing its maturity or integration status:
 - 🚀 [Date Helper](/Next.js-Bolierplate-Wiki/Features/Styling/Theme)
 - 🚀 [General Helper](/Next.js-Bolierplate-Wiki/Features/Styling/Theme)
 - 🚀 [Constant](/Next.js-Bolierplate-Wiki/Features/Styling/Theme)
-
 
 # DevOps: configure, test, build, deploy, host
 

@@ -71,10 +71,8 @@ export const NavLink = ({
 					{children}
 				</a>
 			) : (
-				<Link href={href} passHref>
-					<a aria-current={isActive} onClick={onClick} className={styles['link']}>
-						{children}
-					</a>
+				<Link href={href} onClick={onClick}>
+					{children}
 				</Link>
 			)}
 			<Modal

@@ -41,9 +41,6 @@ describe.each([
 		request: {
 			method: 'POST',
 			url: `${TEST_URL}/posts`,
-			headers: {
-				accept: '*/*',
-			},
 			data: {
 				userId: 1,
 				id: 101,
@@ -67,9 +64,6 @@ describe.each([
 		request: {
 			method: 'GET',
 			url: `${TEST_URL}/todos/1`,
-			headers: {
-				accept: '*/*',
-			},
 		},
 		expected: {
 			data: {
@@ -87,9 +81,6 @@ describe.each([
 		request: {
 			method: 'GET',
 			url: `${TEST_URL}/todosd/1`,
-			headers: {
-				accept: '*/*',
-			},
 		},
 		expected: {
 			data: null,

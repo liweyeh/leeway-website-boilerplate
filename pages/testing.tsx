@@ -15,9 +15,6 @@ export default function Testing() {
 	const request = {
 		method: 'POST',
 		url: `${CONSTANT.API_BASE_URL}/posts`,
-		headers: {
-			accept: '*/*',
-		},
 		data: {
 			userId: 1,
 			id: 19392,
