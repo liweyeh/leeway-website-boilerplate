@@ -1,0 +1,77 @@
+@use './variables' as var;
+/*
+ * Theme definitions
+ */
+$themes: (
+	light: (
+		backgroundColor: var.$cr-light-background,
+		buttonColor: var.$cr-light-background-cta,
+		buttonHoverColor: darken(var.$cr-light-background-cta, 5%),
+		buttonActiveColor: darken(var.$cr-light-background-cta, 10%),
+		backdropColor: var.$cr-light-background-backdrop,
+		textColor: var.$cr-light-text,
+		textDisabledColor: lighten(var.$cr-light-text, 10%),
+		subtextColor: lighten(var.$cr-light-text, 5%),
+		boxShadow: var.$box-shadow-light,
+		errorColor: var.$cr-light-error,
+		successColor: var.$cr-light-success,
+	),
+	dark: (
+		backgroundColor: var.$cr-dark-background,
+		buttonColor: var.$cr-dark-background-cta,
+		buttonHoverColor: darken(var.$cr-dark-background-cta, 20%),
+		buttonActiveColor: darken(var.$cr-dark-background-cta, 10%),
+		backdropColor: var.$cr-dark-background-backdrop,
+		textColor: var.$cr-dark-text,
+		textDisabledColor: darken(var.$cr-dark-text, 10%),
+		subtextColor: darken(var.$cr-dark-text, 5%),
+		boxShadow: var.$box-shadow-dark,
+		errorColor: var.$cr-dark-error,
+		successColor: var.$cr-dark-success,
+	),
+);
+
+/*
+ * Implementation of themes
+ */
+@mixin themify-glb($themes) {
+	@each $theme, $map in $themes {
+		.theme-#{$theme} & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge(
+					$theme-map,
+					(
+						$key: $value,
+					)
+				) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@mixin themify-module($themes) {
+	@each $theme, $map in $themes {
+		:global(.theme-#{$theme}) & {
+			$theme-map: () !global;
+			@each $key, $submap in $map {
+				$value: map-get(map-get($themes, $theme), '#{$key}');
+				$theme-map: map-merge(
+					$theme-map,
+					(
+						$key: $value,
+					)
+				) !global;
+			}
+			@content;
+			$theme-map: null !global;
+		}
+	}
+}
+
+@function themed($key) {
+	@return map-get($theme-map, $key);
+}

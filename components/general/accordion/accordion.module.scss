@@ -1,0 +1,94 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/themes' as theme;
+
+$title-border-radius: var.$border-radius-xl;
+
+.accordion {
+	width: 300px;
+
+	&-title {
+		@include theme.themify-module(theme.$themes) {
+			background-color: theme.themed('buttonColor');
+		}
+
+		text-align: left;
+		transition: border-radius 0.5s ease;
+		border-radius: $title-border-radius;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		padding: var.$space-tab-xs var.$space-tab-m;
+
+		&-content {
+			float: right;
+		}
+
+		&-show {
+			border-radius: $title-border-radius $title-border-radius 0 0;
+		}
+
+		&-button {
+			border: none;
+			right: 1rem;
+			background-color: inherit;
+			cursor: pointer;
+
+			&:focus {
+				outline: none;
+			}
+
+			&-arrow {
+				$arrow-width: 3px;
+				@include theme.themify-module(theme.$themes) {
+					border: solid theme.themed('textColor');
+					border-width: 0 2px 2px 0;
+				}
+
+				padding: $arrow-width;
+				display: inline-block;
+				transition: transform 0.25s ease, margin 0.25s ease;
+
+				&-collapse {
+					transform: rotate(45deg) translateY(calc($arrow-width * -0.5))
+						translateX(calc($arrow-width * -0.5));
+					-webkit-transform: rotate(45deg) translateY(calc($arrow-width * -0.5))
+						translateX(calc($arrow-width * -0.5));
+				}
+
+				&-show {
+					transform: rotate(-135deg) translateY(calc($arrow-width * -0.5))
+						translateX(calc($arrow-width * -0.5));
+					-webkit-transform: rotate(-135deg) translateY(calc($arrow-width * -0.5))
+						translateX(calc($arrow-width * -0.5));
+				}
+			}
+		}
+	}
+
+	&-body {
+		text-align: left;
+		@include theme.themify-module(theme.$themes) {
+			background-color: theme.themed('buttonColor');
+		}
+		transition: opacity 0.5s ease-in, bottom 0.5s ease-in;
+		position: relative;
+
+		&-show {
+			padding: var.$space-tab-m;
+			height: auto;
+			opacity: 1;
+			bottom: 0;
+			border-radius: 0 0 $title-border-radius $title-border-radius;
+		}
+
+		&-hidden {
+			height: 0;
+			opacity: 0;
+			margin: 0 !important;
+			overflow: hidden;
+			visibility: hidden;
+			bottom: -100;
+		}
+	}
+}

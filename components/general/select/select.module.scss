@@ -1,0 +1,115 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/mixins' as mixin;
+@use '../../../styles/themes' as theme;
+
+@mixin option {
+	@include typ.text;
+	cursor: pointer;
+	padding: var.$space-desk-xs var.$space-desk-s;
+	display: flex;
+	align-items: center;
+	min-height: 36px;
+}
+
+@mixin option-bhv {
+	&:hover {
+		@include theme.themify-module(theme.$themes) {
+			background-color: theme.themed('buttonHoverColor');
+		}
+	}
+
+	&-selected {
+		@include theme.themify-module(theme.$themes) {
+			background-color: theme.themed('buttonActiveColor');
+		}
+	}
+	transition: all 0.2s ease;
+}
+
+.select {
+	width: 100%;
+
+	&-field {
+		position: relative;
+	}
+
+	&-name {
+		p {
+			margin-bottom: var.$space-desk-s;
+		}
+	}
+
+	&-container {
+		cursor: pointer;
+		@include theme.themify-module(theme.$themes) {
+			background-color: theme.themed('buttonColor');
+		}
+		position: relative;
+		box-sizing: border-box;
+		height: 36px;
+		@include option;
+
+		&::after {
+			content: '';
+			width: 0;
+			height: 0;
+			border: 5px solid transparent;
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			transition: all 0.2s ease;
+			@include theme.themify-module(theme.$themes) {
+				border-color: theme.themed('textColor') transparent transparent transparent;
+			}
+		}
+
+		&-default {
+			@include typ.text;
+			@include theme.themify-module(theme.$themes) {
+				color: theme.themed('subtextColor');
+			}
+		}
+
+		&-opened {
+			&::after {
+				top: 8px;
+				transform: rotate(180deg);
+			}
+		}
+
+		&-text {
+			width: 80%;
+			@include mixin.ellipsis;
+		}
+	}
+
+	&-list {
+		width: 100%;
+		box-sizing: border-box;
+		position: absolute;
+		top: 100%;
+		@include theme.themify-module(theme.$themes) {
+			border-top: none;
+			background: theme.themed('buttonColor');
+		}
+		z-index: 2;
+		&-item {
+			@include option;
+			@include option-bhv;
+		}
+	}
+
+	&-error {
+		@include theme.themify-module(theme.$themes) {
+			outline: 2px solid theme.themed('errorColor');
+		}
+		&-text {
+			@include typ.errorStatusText;
+
+			&-hide {
+				opacity: 0;
+			}
+		}
+	}
+}

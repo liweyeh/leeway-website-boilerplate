@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Select snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="select "
+  >
+    <div
+      class="select-field"
+    >
+      <label
+        class="select-name"
+      >
+        <p>
+          Select faulty meter.
+        </p>
+      </label>
+      <div
+        class="select-container select-container-default false false"
+        role="listbox"
+      >
+        <div
+          class="select-container-text"
+        >
+          Select
+        </div>
+      </div>
+    </div>
+    <div
+      class="select-error-text select-error-text-hide"
+    >
+      Please select an item
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`test error Select snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="select "
+  >
+    <div
+      class="select-field"
+    >
+      <label
+        class="select-name"
+      >
+        <p>
+          Select faulty meter.
+        </p>
+      </label>
+      <div
+        class="select-container select-container-default false select-error"
+        role="listbox"
+      >
+        <div
+          class="select-container-text"
+        >
+          Select
+        </div>
+      </div>
+    </div>
+    <div
+      class="select-error-text false"
+    >
+      Please select an item
+    </div>
+  </div>
+</DocumentFragment>
+`;

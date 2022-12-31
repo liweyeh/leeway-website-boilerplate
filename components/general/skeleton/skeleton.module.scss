@@ -1,0 +1,36 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/themes' as theme;
+
+.skeleton {
+	border-radius: var.$border-radius-xl;
+	@include theme.themify-module(theme.$themes) {
+		background-image: linear-gradient(
+			90deg,
+			theme.themed('buttonColor') 30%,
+			darken(theme.themed('buttonColor'), 15%) 60%,
+			theme.themed('buttonColor') 61%
+		);
+	}
+	background-size: 1000% 100%;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	animation: bg-pan-left 1.5s linear infinite both;
+}
+
+@-webkit-keyframes bg-pan-left {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+@keyframes bg-pan-left {
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

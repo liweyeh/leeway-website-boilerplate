@@ -1,0 +1,52 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/mixins' as mixin;
+@use '../../../styles/themes' as theme;
+
+.dropdown {
+	position: absolute;
+
+	&-button {
+		display: block;
+	}
+
+	&-menu {
+		z-index: 2;
+		position: absolute;
+		right: 0px;
+		padding: var.$space-desk-m 0px;
+		width: 210px;
+		transition: opacity 0.3s ease 0.1s, width 0.3s ease;
+		border-radius: 10px 0px 10px 10px;
+
+		@include theme.themify-module(theme.$themes) {
+			background-color: theme.themed('buttonColor');
+		}
+
+		&-hidden {
+			width: 100px;
+			opacity: 0;
+			visibility: hidden;
+			overflow: hidden;
+		}
+
+		a {
+			text-decoration: none;
+		}
+
+		p {
+			@include typ.h6;
+			padding: var.$space-desk-s var.$space-desk-m;
+			cursor: pointer;
+			@include theme.themify-module(theme.$themes) {
+				color: theme.themed('textColor');
+				&:hover {
+					background-color: theme.themed('buttonHoverColor');
+				}
+				&:active {
+					background-color: theme.themed('buttonActiveColor');
+				}
+			}
+		}
+	}
+}

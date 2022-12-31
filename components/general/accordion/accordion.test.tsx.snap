@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="accordion undefined"
+  >
+    <div
+      class="
+              accordion-title
+              accordion-title-hidden
+            "
+    >
+      <div
+        class="accordion-title-content"
+      >
+        <p>
+          Title
+        </p>
+      </div>
+      <button
+        class="accordion-title-button"
+      >
+        <div
+          class="accordion-title-button-arrow accordion-title-button-arrow-collapse"
+        />
+      </button>
+    </div>
+    <div
+      class="
+            accordion-body 
+            accordion-body-hidden
+          "
+    >
+      <p>
+        Body Content
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

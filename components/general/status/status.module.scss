@@ -1,0 +1,106 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/mixins' as mixin;
+@use '../../../styles/themes' as theme;
+
+.status {
+	width: 200px;
+	height: 65px;
+	position: relative;
+	@include theme.themify-module(theme.$themes) {
+		box-shadow: theme.themed('boxShadow');
+		background: theme.themed('buttonColor');
+	}
+
+	&-hide {
+		opacity: 0;
+		cursor: default;
+	}
+
+	&-close {
+		padding: 0px;
+		position: absolute;
+		right: 0;
+
+		&-icon {
+			@include theme.themify-module(theme.$themes) {
+				fill: theme.themed('textColor');
+			}
+			width: 16px;
+			height: 16px;
+		}
+	}
+
+	&-container {
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding-left: var.$space-desk-s;
+	}
+
+	&-text {
+		width: 90%;
+		padding-left: var.$space-desk-xs;
+
+		p {
+			padding-left: var.$space-desk-xs;
+
+			&:first-of-type {
+				@include typ.h6;
+				padding-top: var.$space-desk-xs;
+			}
+
+			&:last-of-type {
+				@include typ.subtext;
+				padding-bottom: var.$space-desk-xs;
+			}
+		}
+	}
+
+	@mixin rect {
+		position: absolute;
+		left: 0;
+		width: 4px;
+		height: 100%;
+	}
+
+	@mixin icon($cr) {
+		width: 16px;
+		height: 16px;
+		&-rect {
+			position: absolute;
+			left: 0;
+			width: 4px;
+			height: 100%;
+			background-color: $cr;
+		}
+
+		circle {
+			fill: $cr;
+		}
+	}
+
+	&-error {
+		@include theme.themify-module(theme.$themes) {
+			@include icon(theme.themed('errorColor'));
+		}
+	}
+
+	&-success {
+		@include theme.themify-module(theme.$themes) {
+			@include icon(theme.themed('successColor'));
+		}
+	}
+}
+
+@include mixin.screen-mobile {
+	.status {
+		&-container {
+			height: 60px;
+		}
+
+		&-text {
+			padding-left: 0px;
+		}
+	}
+}

@@ -1,0 +1,28 @@
+[
+	{
+		"id": 1,
+		"nameDisplay": {
+			"name": "I am the first POI",
+			"x": 10,
+			"y": 10
+		},
+		"type": "river"
+	},
+	{
+		"id": 2,
+		"nameDisplay": {
+			"name": "I am the second POI",
+			"x": 220,
+			"y": 120
+		},
+		"x": 200,
+		"y": 140,
+		"type": "station"
+	},
+	{
+		"id": 3,
+		"x": 400,
+		"y": 240,
+		"type": "station"
+	}
+]

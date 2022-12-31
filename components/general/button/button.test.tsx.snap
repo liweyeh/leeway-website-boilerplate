@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test snapshot 1`] = `
+<DocumentFragment>
+  <button
+    aria-label="button"
+    class="button-default button-large "
+    type="button"
+  >
+    Button Test
+  </button>
+</DocumentFragment>
+`;

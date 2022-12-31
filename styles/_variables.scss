@@ -1,0 +1,113 @@
+// Color
+//// General
+$cr-link: #067296;
+
+//// Light
+$cr-light-background: #2a9d8f;
+$cr-light-background-cta: #e9c46a;
+$cr-light-background-backdrop: #575757;
+$cr-light-text: #264653;
+$cr-light-error: #8c2b00;
+$cr-light-success: rgb(54, 130, 35);
+
+//// Dark
+$cr-dark-background: #264653;
+$cr-dark-background-cta: #e76f51;
+$cr-dark-background-backdrop: #828282;
+$cr-dark-text: #e9c46a;
+$cr-dark-error: #b30202;
+$cr-dark-success: rgb(27, 140, 0);
+
+// Screen size
+$screen-mobile: 480px;
+$screen-tablet: 768px;
+$screen-sm-desktop: 1024px;
+$screen-md-desktop: 1200px;
+
+// Box shadow
+$box-shadow-light: 0 0px 10px 0px rgba(7, 22, 51, 0.12);
+$box-shadow-dark: 0 0 10px 0 rgba(7, 22, 51, 0.12);
+
+// Font family
+$font-family-main: Arial;
+
+// Font weight
+$fw-normal: 400;
+$fw-bold: 700;
+
+// Font size - desktop - lg
+$fs-desk-lg-xxl: 50px;
+$fs-desk-lg-xl: 28px;
+$fs-desk-lg-l: 24px;
+$fs-desk-lg-m: 20px;
+$fs-desk-lg-s: 18px;
+$fs-desk-lg-xs: 16px;
+$fs-desk-lg-xxs: 14px;
+
+// Font size - desktop - md
+$fs-desk-md-xxl: 48px;
+$fs-desk-md-xl: 26px;
+$fs-desk-md-l: 22px;
+$fs-desk-md-m: 19px;
+$fs-desk-md-s: 17px;
+$fs-desk-md-xs: 15px;
+$fs-desk-md-xxs: 13px;
+
+// Font size - desktop - sm
+$fs-desk-sm-xxl: 46px;
+$fs-desk-sm-xl: 24px;
+$fs-desk-sm-l: 20px;
+$fs-desk-sm-m: 18px;
+$fs-desk-sm-s: 16px;
+$fs-desk-sm-xs: 14px;
+$fs-desk-sm-xxs: 12px;
+
+// Font size - tablet
+$fs-tab-xxl: 44px;
+$fs-tab-xl: 22px;
+$fs-tab-l: 18px;
+$fs-tab-m: 17px;
+$fs-tab-s: 15px;
+$fs-tab-xs: 13px;
+$fs-tab-xxs: 11px;
+
+// Font size - mobile
+$fs-mobile-xxl: 42px;
+$fs-mobile-xl: 20px;
+$fs-mobile-l: 16px;
+$fs-mobile-m: 16px;
+$fs-mobile-s: 14px;
+$fs-mobile-xs: 12px;
+$fs-mobile-xxs: 11px;
+
+// Spacing - desktop
+$space-desk-xl: 50px;
+$space-desk-l: 40px;
+$space-desk-m: 20px;
+$space-desk-s: 10px;
+$space-desk-xs: 5px;
+
+// Spacing - tablet
+$space-tab-xl: 50px;
+$space-tab-l: 40px;
+$space-tab-m: 20px;
+$space-tab-s: 10px;
+$space-tab-xs: 5px;
+
+// Spacing - mobile
+$space-mobile-xl: 50px;
+$space-mobile-l: 40px;
+$space-mobile-m: 20px;
+$space-mobile-s: 10px;
+$space-mobile-xs: 5px;
+
+// Border radius
+$border-radius-s: 2px;
+$border-radius-m: 4px;
+$border-radius-l: 8px;
+$border-radius-xl: 16px;
+$border-radius-circle: 50px;
+
+// Scrollnar
+$scrollbar-width: 8px;
+$scrollbar-background: rgb(155, 161, 173);

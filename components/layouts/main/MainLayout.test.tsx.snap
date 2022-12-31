@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container"
+  >
+    <div>
+      <div
+        class="dropdown menu"
+        data-cy="dropdown"
+      >
+        <button
+          aria-label="button"
+          class="button-default  dropdown-button"
+          type="button"
+        >
+          <div
+            class="menu-icon"
+          />
+          <div
+            class="menu-icon"
+          />
+          <div
+            class="menu-icon"
+          />
+        </button>
+        <div
+          class="dropdown-menu dropdown-menu-hidden"
+        >
+          <a
+            aria-current="false"
+            class="link"
+            href="/"
+          >
+            <p>
+              Home
+            </p>
+          </a>
+          <a
+            aria-current="false"
+            class="link"
+            href="/theme"
+          >
+            <p>
+              Theme
+            </p>
+          </a>
+          <a
+            aria-current="false"
+            class="link"
+            href="/defaultError"
+          >
+            <p>
+              Default Error Page
+            </p>
+          </a>
+          <a
+            aria-current="false"
+            class="link"
+            href="/testing"
+          >
+            <p>
+              Testing Ground
+            </p>
+          </a>
+          <a
+            aria-current="false"
+            class="link"
+            rel="noreferrer"
+            target="_blank"
+          >
+            <p>
+              External
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div>
+      Main Layout:
+    </div>
+  </div>
+</DocumentFragment>
+`;

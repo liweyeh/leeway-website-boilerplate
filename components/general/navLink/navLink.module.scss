@@ -1,0 +1,52 @@
+@use '../../../styles/typography' as typ;
+@use '../../../styles/variables' as var;
+
+.visually-hidden {
+	display: none;
+}
+
+.link {
+	text-decoration: none;
+}
+
+.modal {
+	&-buttons {
+		margin-top: var.$space-desk-m;
+		width: 100%;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	&-button {
+		height: 30px;
+		width: 100px;
+	}
+}
+
+#nav-link-modal {
+	$width: 350px;
+	$height: 250px;
+	display: flex;
+	flex-direction: column;
+	top: 50%;
+	left: 50%;
+	position: fixed;
+	margin-top: calc($height / -2);
+	margin-left: calc($width / -2);
+	width: $width;
+	height: $height;
+	border-radius: var.$border-radius-l;
+	text-align: center;
+
+	h4 {
+		margin-bottom: var.$space-desk-xs;
+	}
+
+	&-backdrop {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+	}
+}

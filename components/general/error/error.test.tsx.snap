@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test Error 404 snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="error"
+  >
+    <div
+      class="error-icon"
+    >
+      <div
+        class="error-icon-header"
+      >
+        <div
+          class="error-icon-circle"
+        />
+        <div
+          class="error-icon-circle"
+        />
+        <div
+          class="error-icon-circle"
+        />
+        <div
+          class="error-icon-triangle"
+        >
+          <p
+            class="error-icon-triangle-text"
+          >
+            !
+          </p>
+        </div>
+      </div>
+      <div
+        class="error-icon-text"
+      >
+        <p>
+          404
+        </p>
+      </div>
+    </div>
+    <p
+      class="error-title"
+    >
+      Error 404
+    </p>
+    <p
+      class="error-subtext"
+    >
+      There was an error with your request.
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`test Error 500 snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="error"
+  >
+    <div
+      class="error-icon"
+    >
+      <div
+        class="error-icon-header"
+      >
+        <div
+          class="error-icon-circle"
+        />
+        <div
+          class="error-icon-circle"
+        />
+        <div
+          class="error-icon-circle"
+        />
+        <div
+          class="error-icon-triangle"
+        >
+          <p
+            class="error-icon-triangle-text"
+          >
+            !
+          </p>
+        </div>
+      </div>
+      <div
+        class="error-icon-text"
+      >
+        <p>
+          500
+        </p>
+      </div>
+    </div>
+    <p
+      class="error-title"
+    >
+      Internal server error
+    </p>
+    <p
+      class="error-subtext"
+    >
+      The server encountered an error and was unable to complete your request
+    </p>
+  </div>
+</DocumentFragment>
+`;

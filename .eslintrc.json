@@ -1,0 +1,18 @@
+{
+	"env": {
+		"jest/globals": true
+	},
+	"root": true,
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["storybook", "@typescript-eslint", "jest"],
+	"extends": [
+		"next/core-web-vitals",
+		"plugin:storybook/recommended",
+		"plugin:@typescript-eslint/eslint-recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"rules": {
+		"no-console": "warn"
+	}
+}

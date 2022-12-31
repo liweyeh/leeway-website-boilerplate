@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test error textfield snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container "
+  >
+    <input
+      class="textField textField-error"
+      name=""
+      placeholder="Please give it a name"
+      type="text"
+      value=""
+    />
+    <p
+      class="error-msg false"
+    >
+      Please input a new name or press x to cancel
+    </p>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`test textfield snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="container "
+  >
+    <input
+      class="textField textField-valid"
+      name=""
+      placeholder="Please give it a name"
+      type="text"
+      value=""
+    />
+    <p
+      class="error-msg error-msg-hide"
+    >
+      Please input a new name or press x to cancel
+    </p>
+  </div>
+</DocumentFragment>
+`;

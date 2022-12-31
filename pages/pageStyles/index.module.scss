@@ -1,0 +1,13 @@
+@use '../../styles/themes' as theme;
+
+.main {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	p {
+		margin-top: 10px;
+	}
+}

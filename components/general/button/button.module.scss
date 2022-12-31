@@ -1,0 +1,101 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/themes' as theme;
+
+@mixin btn() {
+	@include typ.h6;
+	padding: 0px;
+	cursor: pointer;
+	transition: color 0.5s, transform 0.2s;
+	&:focus-visible {
+		outline: none;
+	}
+
+	&:active {
+		transform: translateY(3px);
+	}
+}
+
+.button {
+	&-default {
+		border-radius: 0;
+		border: none;
+
+		@include theme.themify-module(theme.$themes) {
+			color: theme.themed('textColor');
+			background-color: theme.themed('buttonColor');
+			&:hover {
+				background-color: theme.themed('buttonHoverColor');
+			}
+			&:active {
+				background-color: theme.themed('buttonActiveColor');
+			}
+		}
+
+		@include btn();
+	}
+
+	&-primary {
+		border: none;
+		border-radius: var.$border-radius-s;
+
+		@include theme.themify-module(theme.$themes) {
+			color: theme.themed('textColor');
+			background-color: theme.themed('buttonColor');
+			&:hover {
+				background-color: theme.themed('buttonHoverColor');
+			}
+			&:active {
+				background-color: theme.themed('buttonActiveColor');
+			}
+		}
+
+		@include btn();
+	}
+
+	&-secondary {
+		border-radius: var.$border-radius-s;
+
+		@include theme.themify-module(theme.$themes) {
+			border: 1px solid theme.themed('textColor');
+			color: theme.themed('textColor');
+			background-color: theme.themed('buttonColor');
+			&:hover {
+				background-color: theme.themed('buttonHoverColor');
+			}
+			&:active {
+				background-color: theme.themed('buttonActiveColor');
+			}
+		}
+
+		@include btn();
+	}
+
+	&-disabled {
+		border-radius: var.$border-radius-s;
+		border: none;
+
+		@include theme.themify-module(theme.$themes) {
+			color: theme.themed('textColor');
+			background-color: theme.themed('buttonColor');
+			&:hover {
+				background-color: theme.themed('buttonHoverColor');
+			}
+			&:active {
+				background-color: theme.themed('buttonActiveColor');
+			}
+		}
+
+		@include btn();
+	}
+
+	&-small {
+		width: 100px;
+		min-height: 40px;
+	}
+
+	&-large {
+		width: 200px;
+		min-height: 40px;
+	}
+}

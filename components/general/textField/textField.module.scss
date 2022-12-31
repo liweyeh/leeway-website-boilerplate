@@ -1,0 +1,62 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/themes' as theme;
+
+.container {
+	display: flex;
+	flex-direction: column;
+
+	label {
+		margin-bottom: var.$space-desk-s;
+	}
+}
+
+@mixin textInput {
+	border: none;
+	border-radius: var.$border-radius-l;
+	@include typ.text;
+	@include theme.themify-module(theme.$themes) {
+		background-color: theme.themed('buttonColor');
+	}
+	padding: var.$space-desk-s;
+	width: 100%;
+
+	&:focus-visible {
+		outline: unset;
+	}
+
+	&::placeholder {
+		@include typ.subtext;
+	}
+
+	&::-ms-input-placeholder {
+		@include typ.subtext;
+	}
+
+	&-error {
+		@include theme.themify-module(theme.$themes) {
+			border: 1px solid theme.themed('errorColor');
+			&:focus-visible {
+				border: 1px solid theme.themed('errorColor');
+			}
+		}
+	}
+}
+
+.textArea {
+	@include textInput;
+	height: 12vh;
+	resize: none;
+}
+
+.textField {
+	@include textInput;
+}
+
+.error-msg {
+	@include typ.errorStatusText;
+
+	&-hide {
+		display: none;
+	}
+}

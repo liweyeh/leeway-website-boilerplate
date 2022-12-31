@@ -1,0 +1,22 @@
+@use '../../../styles/variables' as var;
+.icon {
+	&-grid {
+		display: grid;
+		grid-template-columns: repeat(3, auto);
+		grid-gap: 15px;
+	}
+
+	&-item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 150px;
+	}
+
+	&-img {
+		fill: black;
+		width: 100px;
+		height: 100px;
+	}
+}

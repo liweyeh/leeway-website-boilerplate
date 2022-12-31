@@ -1,0 +1,162 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test error status snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="status false"
+  >
+    <button
+      aria-label="close"
+      class="button-default  status-close"
+      type="button"
+    >
+      <svg
+        class="status-close-icon"
+        height="48"
+        viewBox="0 0 48 48"
+        width="48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.45 37.65 10.35 35.55 21.9 24 10.35 12.45 12.45 10.35 24 21.9 35.55 10.35 37.65 12.45 26.1 24 37.65 35.55 35.55 37.65 24 26.1Z"
+        />
+      </svg>
+    </button>
+    <div
+      class="status-error-rect"
+    />
+    <div
+      class="status-container"
+    >
+      <svg
+        class="status-error"
+        height="18"
+        viewBox="0 0 18 18"
+        width="18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          data-name="Group 4217"
+          id="Group_4217"
+          transform="translate(-23384 -8449)"
+        >
+          <circle
+            cx="9"
+            cy="9"
+            data-name="Ellipse 664"
+            id="Ellipse_664"
+            r="9"
+            transform="translate(23384 8449)"
+          />
+          <g
+            data-name="Group 4216"
+            id="Group_4216"
+            transform="translate(23388.689 8453.689)"
+          >
+            <path
+              d="M949.44,617.18a.615.615,0,0,1,0,.871l-7.389,7.389a.616.616,0,0,1-.871-.871l7.389-7.389A.615.615,0,0,1,949.44,617.18Z"
+              data-name="Path 3305"
+              fill="#fff"
+              fill-rule="evenodd"
+              id="Path_3305"
+              transform="translate(-941 -617)"
+            />
+            <path
+              d="M941.18,617.18a.615.615,0,0,1,.871,0l7.389,7.389a.616.616,0,0,1-.871.871l-7.389-7.389A.615.615,0,0,1,941.18,617.18Z"
+              data-name="Path 3306"
+              fill="#fff"
+              fill-rule="evenodd"
+              id="Path_3306"
+              transform="translate(-941 -617)"
+            />
+          </g>
+        </g>
+      </svg>
+      <div
+        class="status-text"
+      >
+        <p>
+          Error
+        </p>
+        <p>
+          Please resolve the errors above
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`test success status snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="status false"
+  >
+    <button
+      aria-label="close"
+      class="button-default  status-close"
+      type="button"
+    >
+      <svg
+        class="status-close-icon"
+        height="48"
+        viewBox="0 0 48 48"
+        width="48"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12.45 37.65 10.35 35.55 21.9 24 10.35 12.45 12.45 10.35 24 21.9 35.55 10.35 37.65 12.45 26.1 24 37.65 35.55 35.55 37.65 24 26.1Z"
+        />
+      </svg>
+    </button>
+    <div
+      class="status-success-rect"
+    />
+    <div
+      class="status-container"
+    >
+      <svg
+        class="status-success"
+        height="18"
+        viewBox="0 0 18 18"
+        width="18"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          data-name="Group 4218"
+          id="Group_4218"
+          transform="translate(-23407 -8449)"
+        >
+          <circle
+            cx="9"
+            cy="9"
+            data-name="Ellipse 665"
+            fill="#1b8c00"
+            id="Ellipse_665"
+            r="9"
+            transform="translate(23407 8449)"
+          />
+          <path
+            d="M10.67.176a.6.6,0,0,1,0,.852L4.042,7.657a.6.6,0,0,1-.852,0L.176,4.644a.6.6,0,0,1,.852-.852L3.615,6.379l6.2-6.2A.6.6,0,0,1,10.67.176Z"
+            data-name="tick'"
+            fill="#fff"
+            fill-rule="evenodd"
+            id="tick_"
+            transform="translate(23410.492 8454.168)"
+          />
+        </g>
+      </svg>
+      <div
+        class="status-text"
+      >
+        <p>
+          Success
+        </p>
+        <p>
+          Please resolve the errors above
+        </p>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

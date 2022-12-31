@@ -1,0 +1,97 @@
+/*
+* Preset css rules such as position, transition, animation ... etc
+*/
+@use './variables' as var;
+@use './themes' as theme;
+
+// animation
+/*
+* Create fade in animation
+* @param $x : starting point of the fade in
+* @param $y : starting point of the fade in
+* @param $opacity : ending opacity of the element
+*/
+@mixin fade($x, $y, $opacity: 1) {
+	$name: fade-in-#{unique-id()};
+	@keyframes #{$name} {
+		0% {
+			transform: translate($x, $y);
+			opacity: 0;
+		}
+		100% {
+			transform: translate(0, 0);
+			opacity: $opacity;
+		}
+	}
+
+	animation: $name 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+// UI Element
+/*
+* Backdrop of the modal
+* @param $width : width of the Backdrop
+* @param $height : height of the Backdrop
+* @param $zIndex : zIndex of the Backdrop
+*/
+@mixin backdrop($width, $height, $zIndex: 3000) {
+	display: none;
+	width: $width;
+	height: $height;
+	@include theme.themify-module(theme.$themes) {
+		background-color: theme.themed('backdropColor');
+	}
+	z-index: $zIndex;
+	overflow: hidden;
+	@include fade(0, 0, 0.75);
+
+	&-show {
+		display: block;
+	}
+}
+
+/*
+* Turn overflown text into dots
+*/
+@mixin ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+// Screen Sizes
+/*
+* Screen size width below 480px
+*/
+@mixin screen-mobile() {
+	@media only screen and (max-width: #{var.$screen-mobile}) {
+		@content;
+	}
+}
+
+/*
+* Screen size width below 768px
+*/
+@mixin screen-tablets() {
+	@media only screen and (min-width: calc(#{var.$screen-mobile} + 1px)) and (max-width: #{var.$screen-tablet}) {
+		@content;
+	}
+}
+
+/*
+* Screen size width below 1024px
+*/
+@mixin screen-sm-desktop() {
+	@media only screen and (min-width: calc(#{var.$screen-tablet} + 1px)) and (max-width: #{var.$screen-sm-desktop}) {
+		@content;
+	}
+}
+
+/*
+* Screen size width below 1200px
+*/
+@mixin screen-md-desktop() {
+	@media only screen and (min-width: calc(#{var.$screen-sm-desktop} + 1px)) and (max-width: #{var.$screen-md-desktop}) {
+		@content;
+	}
+}

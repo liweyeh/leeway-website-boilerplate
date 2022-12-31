@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown "
+    data-cy="dropdown"
+  >
+    <button
+      aria-label="button"
+      class="button-default  dropdown-button"
+      type="button"
+    >
+      hi
+    </button>
+    <div
+      class="dropdown-menu dropdown-menu-hidden"
+    >
+      <a
+        aria-current="false"
+        class="link"
+        href="/"
+      >
+        <p>
+          home
+        </p>
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;

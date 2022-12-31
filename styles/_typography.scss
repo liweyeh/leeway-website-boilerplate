@@ -1,0 +1,219 @@
+@use './variables' as var;
+@use './mixins' as mixin;
+@use './themes' as theme;
+
+// Foundation of all text styles
+@mixin baseText {
+	font-family: var.$font-family-main;
+	font-stretch: normal;
+	font-style: normal;
+	letter-spacing: normal;
+	margin: 0;
+	text-transform: none;
+}
+
+// Header
+@mixin headerText($lineHeight) {
+	@include baseText();
+	font-weight: var.$fw-bold;
+	line-height: $lineHeight;
+	@include theme.themify-glb(theme.$themes) {
+		color: theme.themed('textColor');
+	}
+	@include theme.themify-module(theme.$themes) {
+		color: theme.themed('textColor');
+	}
+}
+
+@mixin h1 {
+	@include headerText(1);
+	font-size: var.$fs-desk-lg-xxl;
+
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-xxl;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-xxl;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-xxl;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-xxl;
+	}
+	.dark {
+		color: green;
+	}
+}
+
+@mixin h2 {
+	@include headerText(1);
+	font-size: var.$fs-desk-lg-xl;
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-xl;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-xl;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-xl;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-xl;
+	}
+}
+
+@mixin h3 {
+	@include headerText(0.83);
+	font-size: var.$fs-desk-lg-l;
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-l;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-l;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-l;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-l;
+	}
+}
+
+@mixin h4 {
+	@include headerText(1);
+	font-size: var.$fs-desk-lg-m;
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-m;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-m;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-m;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-m;
+	}
+}
+
+@mixin h5 {
+	@include headerText(1.11);
+	font-size: var.$fs-desk-lg-s;
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-s;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-s;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-s;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-s;
+	}
+}
+
+@mixin h6 {
+	@include headerText(1.25);
+	font-size: var.$fs-desk-lg-xs;
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-xs;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-xs;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-xs;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-xs;
+	}
+}
+
+// Body text
+@mixin text {
+	@include baseText();
+	font-size: var.$fs-desk-lg-xs;
+	font-weight: var.$fw-normal;
+	line-height: 1.25;
+	@include theme.themify-glb(theme.$themes) {
+		color: theme.themed('textColor');
+	}
+	@include theme.themify-module(theme.$themes) {
+		color: theme.themed('textColor');
+	}
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-xs;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-xs;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-xs;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-xs;
+	}
+}
+
+@mixin subtext {
+	@include baseText();
+	font-weight: var.$fw-normal;
+	line-height: 1.43;
+	font-size: var.$fs-desk-lg-xxs;
+	@include theme.themify-glb(theme.$themes) {
+		color: theme.themed('subtextColor');
+	}
+	@include theme.themify-module(theme.$themes) {
+		color: theme.themed('subtextColor');
+	}
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-xxs;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-xxs;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-xxs;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-xxs;
+	}
+}
+
+// Status text
+@mixin statusText {
+	@include baseText();
+	font-size: var.$fs-desk-lg-xxs;
+	font-weight: var.$fw-normal;
+	font-style: italic;
+	line-height: 1.67;
+
+	@include mixin.screen-md-desktop {
+		font-size: var.$fs-desk-md-xxs;
+	}
+	@include mixin.screen-sm-desktop {
+		font-size: var.$fs-desk-sm-xxs;
+	}
+	@include mixin.screen-tablets {
+		font-size: var.$fs-tab-xxs;
+	}
+	@include mixin.screen-mobile {
+		font-size: var.$fs-mobile-xxs;
+	}
+}
+
+@mixin errorStatusText {
+	@include statusText;
+	@include theme.themify-module(theme.$themes) {
+		color: theme.themed('errorColor');
+	}
+}
+
+@mixin successStatusText {
+	@include statusText;
+	@include theme.themify-module(theme.$themes) {
+		color: theme.themed('successColor');
+	}
+}

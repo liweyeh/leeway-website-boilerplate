@@ -1,0 +1,84 @@
+@use '../../../styles/variables' as var;
+@use '../../../styles/typography' as typ;
+@use '../../../styles/mixins' as mixin;
+@use '../../../styles/themes' as theme;
+
+.error {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&-icon {
+		display: flex;
+		border-radius: 10px;
+		flex-direction: column;
+		width: 300px;
+		height: 200px;
+		margin-bottom: var.$space-desk-l;
+
+		&-header {
+			height: 40px;
+			@include theme.themify-module(theme.$themes) {
+				border: 1px solid theme.themed('textColor');
+			}
+			border-radius: 10px 10px 0px 0px;
+			display: flex;
+			align-items: center;
+			padding: 0px 10px;
+			position: relative;
+		}
+
+		&-circle {
+			height: 10px;
+			width: 10px;
+			@include theme.themify-module(theme.$themes) {
+				border: 1px solid theme.themed('textColor');
+			}
+			border-radius: 50%;
+			margin-left: 5px;
+		}
+
+		&-triangle {
+			width: 0;
+			height: 0;
+			border-left: 45px solid transparent;
+			border-right: 45px solid transparent;
+			@include theme.themify-module(theme.$themes) {
+				border-bottom: 70px solid theme.themed('buttonColor');
+			}
+			position: absolute;
+			top: -45px;
+			right: -35px;
+
+			&-text {
+				position: absolute;
+				top: 20px;
+				left: -5px;
+				font-size: 40px;
+			}
+		}
+
+		&-text {
+			margin-top: 5px;
+			flex-grow: 1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include theme.themify-module(theme.$themes) {
+				border: 1px solid theme.themed('textColor');
+			}
+			p {
+				font-weight: bold;
+				font-size: 115px;
+			}
+		}
+	}
+
+	&-subtext {
+		margin-top: var.$space-desk-m;
+		text-align: center;
+	}
+}
